@@ -9,5 +9,6 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "This is mortgage application" );
+        System.out.println( "would like to create account" );
     }
 }
