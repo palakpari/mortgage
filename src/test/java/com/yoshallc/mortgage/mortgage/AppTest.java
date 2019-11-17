@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 
 public class AppTest {
-	private final Logger logger = LoggerFactory.getLogger(AppTest.class);
+
 
 	@Test()
 	public void testEmailGenerator() {
