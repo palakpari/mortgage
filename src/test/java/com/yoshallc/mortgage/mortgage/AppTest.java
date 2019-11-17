@@ -11,6 +11,6 @@ public class AppTest {
 	public void testEmailGenerator() {
 
 		
-		Assert.assertEquals(true, 5==5);
+		Assert.assertEquals(true, 5==10/2);
 	}
 }
