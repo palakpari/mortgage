@@ -14,15 +14,17 @@ public class AppTest {
 	private WebDriver driver;
 
 	@Test()
-	public void testEmailGenerator() {
+	public void testEmailGenerator() throws InterruptedException {
+
+		//mac
+		System.setProperty("webdriver.chrome.driver","./chromedriver/mac/chromedriver");
 
 		//windows
-		//System.setProperty("webdriver.chrome.driver","//src//test//resources//windows//chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","./chromedriver/windows/chromedriver.exe");
 
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
-		driver.manage().window().maximize();
 		driver.get("https://www.bapssatsangexams.org/");
-
+		Thread.sleep(5000);
+		driver.quit();
 	}
 }
