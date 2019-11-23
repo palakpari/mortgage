@@ -4,3 +4,6 @@
 target/
 .settings
 test-output/
+.DS_Store
+.idea/
+mortgage.iml
