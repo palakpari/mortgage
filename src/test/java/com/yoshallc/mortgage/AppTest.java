@@ -16,12 +16,8 @@ public class AppTest {
 	@Test()
 	public void testEmailGenerator() {
 
-		//mac
-		//System.setProperty("webdriver.chrome.driver", "//src//test//resources//mac//chromedriver");
-
 		//windows
-		System.setProperty("webdriver.chrome.driver","//src//test//resources//windows//chromedriver.exe");
-
+		//System.setProperty("webdriver.chrome.driver","//src//test//resources//windows//chromedriver.exe");
 
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
