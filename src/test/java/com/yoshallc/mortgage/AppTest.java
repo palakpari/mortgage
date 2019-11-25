@@ -8,7 +8,6 @@ import static org.hamcrest.Matchers.containsString;
 
 public class AppTest {
 
-
 	@Test()
 	public void testGoogle_gives200OK() throws InterruptedException {
 
