@@ -1,30 +1,33 @@
 package com.yoshallc.mortgage;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.containsString;
 
 
 public class AppTest {
 
-	private WebDriver driver;
 
 	@Test()
-	public void testEmailGenerator() throws InterruptedException {
+	public void testGoogle_gives200OK() throws InterruptedException {
 
-		//mac
-		System.setProperty("webdriver.chrome.driver","./chromedriver/mac/chromedriver");
+		given().when().get("https://reqres.in/api/users/2").then().statusCode(200);
 
-		//windows
-		//System.setProperty("webdriver.chrome.driver","./chromedriver/windows/chromedriver.exe");
+	}
 
-		driver = new ChromeDriver();
-		driver.get("https://www.bapssatsangexams.org/");
-		Thread.sleep(5000);
-		driver.quit();
+	@Test
+	public void testOneUser_givesOneUser(){
+
+		given().when().get("https://reqres.in/api/users/2").then().body(containsString("Janet"));
+
+
+	}
+
+	@Test
+	public void testUserNotFound(){
+
+		given().when().get("https://reqres.in/api/users/23").then().statusCode(404);
+
 	}
 }
