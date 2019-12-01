@@ -7,21 +7,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static org.testng.Assert.assertTrue;
 
 public class MainPage extends BasePage {
 
     public MainPage (WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
-    }
 
+    }
 
    String baseURL = "https://www.bapssatsangexams.org/";
 
-
     @FindBy(id = "loginLink")
-    public  By signinlink;
+    public WebElement signinlink;
 
 
     //Go to MainPage
@@ -33,7 +31,18 @@ public class MainPage extends BasePage {
 
     public String validateMainPageTitle(){
         return driver.getTitle();
-
     }
+
+    public void clickSignIn(){
+     //   signinlink = driver.findElement(By.id("loginLink"));
+        click(signinlink);
+    }
+
+    public boolean isSigninlink(){
+
+       return signinlink.isDisplayed();
+    }
+
+
 
 }
