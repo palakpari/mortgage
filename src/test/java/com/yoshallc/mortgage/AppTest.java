@@ -55,7 +55,7 @@ public class AppTest extends BaseTest {
 
         HomePage homePage = new HomePage(driver);
         Util.takeScreenshotAtEndOfTest(driver,"validateSuccessfulLogin");
-        assertEquals(homePage.readCandidateName(),"Nilesh Patel");
+        assertEquals(homePage.readCandidateName(),"<replace with your name>");
 
 
     }
