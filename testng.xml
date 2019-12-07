@@ -2,7 +2,7 @@
 <suite name="example suite 1" verbose="1" >
   <test name="Regression suite 1" >
     <classes>
-      <class name="com.yoshallc.mortgage.AppTest"/>
+      <class name="com.yoshallc.mortgage.NavigateTo"/>
     </classes>
  </test>
 </suite>
