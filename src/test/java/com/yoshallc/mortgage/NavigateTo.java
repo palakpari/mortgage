@@ -52,19 +52,13 @@ public class NavigateTo extends HomePageObj {
 		Select dropdown = new Select(txtUserName);
 		dropdown.selectByVisibleText("");
 		
-		TakesScreenshot ts = new TakesScreenshot() {
-			
-			public <X> X getScreenshotAs(OutputType<X> target) throws WebDriverException {
-				// TODO Auto-generated method stub
-				return null;
-			}
-		};
+		
 		Actions action = new Actions(driver);
 		action.moveToElement(txtUserName).build().perform();
 	
 		Thread.sleep(5000);
-		txtUserName.sendKeys("jc_nilesh1980");
-		txtPassword.sendKeys("Baps2005");
+		txtUserName.sendKeys("UserName");
+		txtPassword.sendKeys("Password");
 		btnSignIn.click();
 		Thread.sleep(5000);
 		driver.navigate().back();
